@@ -1,0 +1,79 @@
+Between 1:40 and 7:00, edit the base.html template inside the store templates folder.
+
+ 
+
+{% extends 'bootstrap4/bootstrap4.html %}
+
+ 
+
+{% load static %}
+
+ 
+
+{% load bootstrap4 %}
+
+ 
+
+{% load bootstrap_themes %}
+
+ 
+
+{% bootstrap_styles theme='simplex' type='min.css' %}
+
+ 
+
+{% block bootstrap4_extra_head %} 
+
+<link href="http://fonts.googleapis.com/css?family=Open Sans:400,300,700" 
+
+      rel="stylesheet" 
+
+      type="text/css">
+
+      <link href="{% static 'base/css/style.css' %}" 
+
+      rel="stylesheet" 
+
+      type="text/css">
+
+{% endblock %}
+
+ 
+
+{% block bootstrap4_title %}
+
+  {% block title %}
+
+    Welcome to Mystery Books!
+
+  {% endblock %}
+
+{% endblock %}
+
+ 
+
+{% block bootstrap4_content %}
+
+    {% block content %}
+
+ 
+
+    {% endblock %}    
+
+{% endblock %}
+
+{% block bootstrap4_extra_head %} 
+
+<link href="http://fonts.googleapis.com/css?family=Open Sans:400,300,700" 
+
+      rel="stylesheet" 
+
+      type="text/css">
+
+      <link href="{% static 'base/css/style.css' %}" 
+
+      rel="stylesheet" 
+
+      type="text/css">
+
+{% endblock %}
