@@ -5,8 +5,8 @@ from .models import Account, Things
 def home( request):
     account = get_object_or_404( Account, pk=1)
     total = account.total
-    context = { 'username': 'Karl Larson', 'total' : total}
-    return render( request, 'example/home.html', context)
+    context = { 'username': 'Ian Wehmeyer', 'total' : total}
+    return render( request, 'stockapp/home.html', context)
 
 def calc( request):  
     account = get_object_or_404( Account, pk=1)
@@ -28,7 +28,7 @@ def calc( request):
 
     form = CalcForm()
     context = { 'form': form}
-    return render( request, 'example/calc.html', context)
+    return render( request, 'stockapp/calc.html', context)
 
 def thing( request):  
     if request.method == "POST":
@@ -42,11 +42,11 @@ def thing( request):
 
     form = ThingForm()
     context = { 'form': form}
-    return render( request, 'example/thing.html', context)
+    return render( request, 'stockapp/thing.html', context)
 
 
 
 def things( request):
     things = Things.objects.all()
     context = { 'things': things}
-    return render( request, 'example/things.html', context)
+    return render( request, 'stockapp/things.html', context)
