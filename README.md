@@ -28,3 +28,6 @@ INSTALLED_APPS = [
 ]
 
 python manage.py runserver
+
+
+refer to django module for building user + I believe Karl did a video. Double check. 
